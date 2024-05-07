@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <button onclick="randomizeFunction()">Randomize!!</button>
+    <p>Random generated word is:</p>
+    <p id="randomWord"></p>
+
+    <label for="myInput">Type the word:</label>
+    <input type="text" id="myInput" name="userInput" placeholder="Type here...">
+    <button id="button" onclick="showInput()">Submit</button>
+
+    <p id="is-correct">Correct?</p>
+</html>
+
+<script>
+    const myList = ["List item 1", "List item 2", "List item 3", "List item 4", "List item 5", "anytime", "bed","bite","bleed","double"];
+    var word = myList[Math.floor(Math.random() * myList.length)];
+
+    function randomizeFunction() {
+        word = myList[Math.floor(Math.random() * myList.length)];
+        document.getElementById("randomWord").innerHTML = word;       
+    }
+
+    function showInput() {
+            const userInput = document.getElementById("myInput").value;
+            document.getElementById("is-correct").innerHTML = userInput === word;
+        }
+    document.getElementById("myInput").addEventListener("keyup", function(event) {
+        console.log("+++" + event.keyCode);
+        if(event.keyCode === 13) {
+            showInput();
+        }
+    });
+</script>
