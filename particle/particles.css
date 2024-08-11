@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#standard-model {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.category {
+    padding: 10px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+}
+
+.category h2 {
+    text-align: center;
+    background-color: #ccc;
+    margin: -10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #333;
+}
+
+.particle {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #ddd;
+    border: 1px solid #bbb;
+    text-align: center;
+    cursor: pointer;
+}
+
+.particle:hover {
+    background-color: #ccc;
+}
+
+.hidden {
+    display: none;
+}
